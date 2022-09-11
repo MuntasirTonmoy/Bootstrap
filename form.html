@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="h3 mx-3 my-4 text-center">Registration Form</p>
+      <form novalidate class="m-3">
+        <!-- defalult browser validate off korar jonno novalidate use kora hoise -->
+
+
+        <div class="form-floating">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+        </div>
+        <label for="email" class="form-label">Email</label>
+        <!-- label er jonno class holo form-label -->
+
+        <input type="email" name="email" id="email" class="form-control" />
+        <!-- input er jonno class holo form-control -->
+
+        <label for="password" class="form-label mt-3">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+        />
+
+        <!-- we can also use disabled, readonly with value -->
+        <label for="color" class="form-label mt-3"
+          >Select your favourite color</label
+        >
+        <!-- color input er jonno  form-control-color add korte hoy -->
+       
+        <input
+          type="color"
+          class="form-control form-control-color"
+          id="color"
+          value="#f100af"
+        />
+        <!-- input group er vitore form-control input kaj kore readonly form-control-plaintext kaj kore kina ta dekhkte hobe r input group e intput-goup-text kaj kore button kaj kore -->
+        <label for="donate" class="form-label mt-3"
+        >Select Donation Amount</label
+      >
+        <div class="input-group mb-3">
+            <div class="input-group-text">$</div>
+            <input type="number" min="1" class="form-control">
+            <button class="btn btn-primary">Donate</button>
+        </div>
+
+        <label for="range" class="form-label mt-3"
+          >Select your favourite number from 1 to 100</label
+        >
+        <!-- range er jonno form-range class use kora lage -->
+        <input
+          type="range"
+          name="range"
+          class="form-range"
+          id="range"
+          value="1"
+          min="1"
+          max="100"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output class="d-block">1</output>
+
+        <label for="gender" class="form-label mt-3">Gender</label>
+        <!-- select er jonno form-select class use korte hoy -->
+        <select name="" id="gender" class="form-select">
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+        <!-- checkbox er jonno form-check er moddhe form-check-input r form-check-label use korte hoy r switch we jonno form-check er sathe form-switch -->
+        <div class="my-3 form-check form-switch">
+          <input type="checkbox" name="" id="agree" class="form-check-input" />
+          <label for="agree" class="form-check-label"
+            >I Agree with the terms & conditions</label
+          >
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
